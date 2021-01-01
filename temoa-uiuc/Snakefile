@@ -61,7 +61,8 @@ rule temoa_run:
         r"data_files/{db}_{scenario}_model/{scenario}_OutputLog.log",
         r"data_files/{db}_{scenario}_model/{scenario}.lp"
     shell:
-        "set +o pipefail; yes | python $TEMOA/temoa_model --config={input}"
+        "set +o pipefail; yes | python ~/projects/temoa/temoa_model --config={input}"
+#        "set +o pipefail; yes | python $TEMOA/temoa_model --config={input}"
 
 rule make_emission_plots:
     input:
